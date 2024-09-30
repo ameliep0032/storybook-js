@@ -2,15 +2,21 @@
   "name": "storybook-js",
   "version": "1.0.0",
   "description": "A storybook js repo",
-  "main": "index.js",
+  "main": "build/storybook-js.min.js",
+  "private": "false",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "webpack"
   },
   "author": "amelie",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
     "@chromatic-com/storybook": "^1.9.0",
     "@storybook/addon-essentials": "^8.3.4",
     "@storybook/addon-interactions": "^8.3.4",
@@ -21,10 +27,16 @@
     "@storybook/react": "^8.3.4",
     "@storybook/react-webpack5": "^8.3.4",
     "@storybook/test": "^8.3.4",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.3.4"
+    "storybook": "^8.3.4",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   },
   "peerDependencies": {
     "react": "^18.3.1",

@@ -13,5 +13,14 @@ const config = {
     name: "@storybook/react-webpack5",
     options: {},
   },
+  core: {
+    builder: {
+      name: "@storybook/builder-webpack5",
+      options: {
+        fsCache: true,
+        lazyCompilation: true,
+      },
+    },
+  },
 };
 export default config;
